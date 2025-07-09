@@ -1,23 +1,6 @@
 <?php
 session_start();
-
-// Conexão com banco de dados
-$host = 'localhost';
-$db   = 'marketplace';
-$user = 'root';
-$pass = '';
-$charset = 'utf8mb4';
-
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
-$options = [
-    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-];
-try {
-    $pdo = new PDO($dsn, $user, $pass, $options);
-} catch (\PDOException $e) {
-    die('Erro ao conectar no banco: ' . $e->getMessage());
-}
+require_once 'conexao.php';
 
 // Buscar os produtos em destaque (exemplo: 6 últimos cadastrados)
 $stmt = $pdo->prepare("SELECT * FROM produtos ORDER BY criado_em DESC LIMIT 6");
