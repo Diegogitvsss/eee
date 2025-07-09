@@ -947,7 +947,7 @@ body {
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Sobre o MarketPlace</h3>
+                    <h3>Sobre o ProMarket</h3>
                     <ul>
                         <li><a href="#">Quem Somos</a></li>
                         <li><a href="#">Trabalhe Conosco</a></li>
